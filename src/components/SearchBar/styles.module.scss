@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+
+  background: #2a2a2a;
+  color: #fff;
+}
