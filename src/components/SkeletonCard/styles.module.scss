@@ -1,15 +1,15 @@
 @keyframes shimmer {
   0% {
-    background-position: -400px 0;
+    background-position: -280px 0;
   }
   100% {
-    background-position: 400px 0;
+    background-position: 280px 0;
   }
 }
 
 .card {
   flex: 1 1 280px;
-  max-width: 300px;
+  max-width: 270px;
   border-radius: 12px;
   overflow: hidden;
   background: #1b1b1b;
@@ -43,7 +43,7 @@
     #3a3a3a 50%,
     #2a2a2a 75%
   );
-  background-size: 400px 100%;
+  background-size: 480px 100%;
   animation: shimmer 1.2s infinite;
 }
 

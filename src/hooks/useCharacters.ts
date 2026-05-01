@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { Character } from '../types/character'
+import { fetchCharacters } from '../services/api'
 
 export const useCharacters = () => {
   const [characters, setCharacters] = useState<Character[]>([])
@@ -9,9 +10,8 @@ export const useCharacters = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('https://hp-api.onrender.com/api/characters')
-        const data = await res.json()
-        setCharacters(data)
+        const res = await fetchCharacters()
+        setCharacters(res)
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (err) {
         setError('Erro ao carregar personagens')

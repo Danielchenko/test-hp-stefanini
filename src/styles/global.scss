@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* RESET básico */
 * {
   margin: 0;
@@ -10,8 +12,8 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #0f0f0f;
+  font-family: "Roboto", sans-serif;
+  background: #02080F;
   color: #fff;
 }
 
@@ -30,6 +32,7 @@ body {
 
 /* Títulos */
 h1 {
+  font-family: "Henny Penny", system-ui;
   text-align: center;
   margin-bottom: 24px;
 }
