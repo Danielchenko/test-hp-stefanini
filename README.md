@@ -1,73 +1,110 @@
-# React + TypeScript + Vite
+# 🧙 Wizard Characters App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação desenvolvida em React para listagem de personagens de um universo mágico, consumindo uma API pública e exibindo informações relevantes de forma organizada, responsiva e com boa experiência de usuário.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Deploy
 
-## React Compiler
+👉 https://test-hp-stefanini.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![alt text](image.png)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* 📋 Listagem de personagens
+* 🏠 Filtro por casas
+* 🔍 Busca por nome, ator, casa, patrono e espécie
+* ➕ Paginação com botão **Load more**
+* ⏳ Skeleton loading durante carregamento
+* 🖼️ Fallback para imagens quebradas
+* ⬆️ Botão "Back to top"
+* 🎨 Animação suave na entrada dos cards
+* 📱 Layout totalmente responsivo
+* 🎭 Hero com overlay em gradiente
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+* React
+* TypeScript
+* SCSS (Sass)
+* Vite
+* API REST
+
+---
+
+## 📦 Como rodar o projeto
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/Danielchenko/test-hp-stefanini.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Acesse a pasta do projeto:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd test-hp-stefanini
 ```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npm run dev
+```
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+src/
+  components/
+  hooks/
+  services/
+  types/
+  layout/
+  styles/
+```
+
+---
+
+## 🧠 Decisões técnicas
+
+* Separação de responsabilidades utilizando componentes reutilizáveis
+* Uso de custom hooks para consumo de API (`useCharacters`)
+* Implementação de filtros combinados (busca + categoria)
+* Controle de estado para paginação incremental
+* Uso de skeleton loading para melhorar a percepção de performance
+* Animações com delay progressivo para melhor experiência visual
+* Tratamento de estados da aplicação (loading, error, empty)
+
+---
+
+## 📌 Melhorias futuras
+
+* Implementar debounce na busca
+* Paginação via API
+* Testes automatizados (unitários e integração)
+* Melhorias de acessibilidade (a11y)
+* Otimização de performance (memoização e lazy loading)
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Daniel Carvalho**
