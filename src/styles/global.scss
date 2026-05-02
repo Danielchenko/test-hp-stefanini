@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-/* RESET básico */
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');/* RESET básico */
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +30,7 @@ body {
 
 /* Títulos */
 h1 {
-  font-family: "Henny Penny", system-ui;
+  font-family: "Merriweather", serif;
   text-align: center;
   margin-bottom: 24px;
 }

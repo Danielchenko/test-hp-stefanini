@@ -11,7 +11,7 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 8px;
   background: #2a2a2a;
   color: #fff;
   border: 1px solid #1c1c1c;
@@ -69,7 +69,6 @@
     justify-content: flex-start;
     overflow-x: auto;
     padding: 0 16px;
-    scrollbar-width: none; 
-    -ms-overflow-style: none;
+
  }
 }

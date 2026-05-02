@@ -9,6 +9,7 @@
   position: relative;
   width: 100%;
   max-width: 400px;
+  margin: 0 10px;
 }
 
 .input {
@@ -35,5 +36,9 @@
 @media (max-width: 1200px) {
   .container{
     justify-content: center;
+  }
+
+  .icon{
+    top: 50%;
   }
 }
