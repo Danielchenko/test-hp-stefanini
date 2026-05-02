@@ -45,11 +45,7 @@ export const CharacterList = () => {
 
   return (
     <>
-      <SearchBar value={search} onChange={(value) => {
-        setSearch(value)
-        setVisibleCount(8) 
-      }} />
-
+     <main>
       <HouseFilter
         selected={selectedHouse}
         onSelect={(house) => {
@@ -58,6 +54,16 @@ export const CharacterList = () => {
         }}
       />
 
+       <SearchBar value={search} onChange={(value) => {
+        setSearch(value)
+        setVisibleCount(8) 
+      }} />
+     </main>
+      {!loading && !error && filteredCharacters.length === 0 && (
+          <p className={styles.empty}>
+            No characters found
+          </p>
+        )}
       {loading ? (
         <div className={styles.container}>
           {Array.from({ length: 8 }).map((_, index) => (
@@ -69,15 +75,19 @@ export const CharacterList = () => {
       ) : (
         <>
           <div className={styles.container}>
-            {visibleCharacters.map((character) => (
-              <CharacterCard key={character.id} character={character} />
+            {visibleCharacters.map((character, index) => (
+              <CharacterCard
+                key={character.id}
+                character={character}
+                style={{ animationDelay: `${index * 1}s` }}
+              />
             ))}
           </div>
 
           {visibleCount < filteredCharacters.length && (
             <div className={styles.buttonWrapper}>
               <button onClick={handleLoadMore} className={styles.button}>
-                Ver mais
+                Load more
               </button>
             </div>
           )}

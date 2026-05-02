@@ -3,6 +3,7 @@ import type { Character } from '../../types/character'
 
 type Props = {
   character: Character
+  style?: React.CSSProperties
 }
 
 export const CharacterCard = ({ character }: Props) => {
@@ -22,22 +23,25 @@ export const CharacterCard = ({ character }: Props) => {
         src={image || '/fallback.png'}
         alt={name}
         className={styles.card__image}
+        onError={(e) => {
+          e.currentTarget.src = '/fallback.png'
+        }}
       />
 
       <div className={styles.card__content}>
         <h2 className={styles.card__name}>{name}</h2>
 
-        <p><strong>Nascimento:</strong> {dateOfBirth || 'Desconhecido'}</p>
-        <p><strong>Casa:</strong> {house || 'Desconhecida'}</p>
-        <p><strong>Patrono:</strong> {patronus || 'Desconhecido'}</p>
-        <p><strong>Ator:</strong> {actor || 'Não informado'}</p>
+        <p><strong>Birth:</strong> {dateOfBirth || 'Unknown'}</p>
+        <p><strong>House:</strong> {house || 'Unknown'}</p>
+        <p><strong>Patronus:</strong> {patronus || 'Unknown'}</p>
+        <p><strong>Actor:</strong> {actor || 'Not informed'}</p>
 
         <span
           className={`${styles.card__status} ${
             alive ? styles.alive : styles.dead
           }`}
         >
-          {alive ? 'Vivo' : 'Morto'}
+          {alive ? 'Alive' : 'Dead'}
         </span>
       </div>
     </div>
