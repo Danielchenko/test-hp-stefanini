@@ -27,7 +27,6 @@ Aplicação desenvolvida em React para listagem de personagens de um universo m�
 * ⬆️ Botão "Back to top"
 * 🎨 Animação suave na entrada dos cards
 * 📱 Layout totalmente responsivo
-* 🎭 Hero com overlay em gradiente
 
 ---
 
@@ -95,15 +94,6 @@ src/
 
 ---
 
-## 📌 Melhorias futuras
-
-* Implementar debounce na busca
-* Paginação via API
-* Testes automatizados (unitários e integração)
-* Melhorias de acessibilidade (a11y)
-* Otimização de performance (memoização e lazy loading)
-
----
 
 ## 👨‍💻 Autor
 
